@@ -4,10 +4,6 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from '@/theme';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,16 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
           <Container>
             <Header />
               {children}
             <Footer />
           </Container>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
       </body>
     </html>
   );

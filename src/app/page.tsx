@@ -1,6 +1,4 @@
 import Image from "next/image";
-import PostList from '@/app/posts/page'
-import CommentsList from '@/app/comments/page'
 
 export default function Home() {
   return (
