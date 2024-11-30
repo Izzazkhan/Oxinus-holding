@@ -1,7 +1,7 @@
 export default function AboutPage() {
     return (
         <div className="bg-gray-100 min-h-screen py-12 px-6">
-            <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+            <div className="max-w-4xl mt-10 mx-auto bg-white shadow-lg rounded-lg p-6">
                 {/* Profile Section */}
                 <div className="flex flex-col md:flex-row items-center gap-6">
                     <img

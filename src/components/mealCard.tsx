@@ -10,34 +10,35 @@ interface MealCardProps {
 }
 
 const MealCard: React.FC<MealCardProps> = ({ meal }) => {
-    const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
-
+    const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites()
     const handleToggleFavorite = () => {
         if (isFavorite(meal.idMeal)) {
-            removeFromFavorites(meal.idMeal);
+            removeFromFavorites(meal.idMeal)
         } else {
-            addToFavorites(meal);
+            addToFavorites(meal)
         }
-    };
+    }
 
     return (
-        <div className="bg-white shadow-md padding-45 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-            <img
-                src={meal.strMealThumb}
-                alt={meal.strMeal}
-                className="w-full h-60 object-cover"
-            />
-            {/* <Image
-                src={meal.strMealThumb}
-                alt={meal.strMeal}
-                width={180}
-                height={38}
-                priority
-            /> */}
+        <div className="text-center bg-white shadow-md padding-45 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="flex justify-center">
+                <img
+                    src={meal.strMealThumb}
+                    alt={meal.strMeal}
+                    className="w-auto h-auto"
+                />
+                {/* <Image
+                    src={meal.strMealThumb}
+                    alt={meal.strMeal}
+                    width='auto'
+                    height='auto'
+                    priority
+                /> */}
+            </div>
             <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">{meal.strMeal}</h2>
+                <h2 className="text-xl font-semibold text-gray-800">{meal.strMeal.split(' ').slice(0,4).join(' ')}</h2>
                 <button
-                    className={`mt-4 w-full py-2 rounded-lg transition ${
+                    className={`mt-4 w-auto py-2 p-12 rounded-lg transition ${
                         isFavorite(meal.idMeal)
                             ? "bg-red-500 text-white hover:bg-red-600"
                             : "bg-blue-500 text-white hover:bg-blue-600"
@@ -48,8 +49,7 @@ const MealCard: React.FC<MealCardProps> = ({ meal }) => {
                 </button>
             </div>
         </div>
+    )
+}
 
-    );
-};
-
-export default MealCard;
+export default MealCard
