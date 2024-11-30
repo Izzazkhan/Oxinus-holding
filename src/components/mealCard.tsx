@@ -3,7 +3,6 @@
 import React from "react";
 import { Meal } from "../utils/types";
 import { useFavorites } from "../context/FavoriteContext";
-import Image from "next/image";
 
 interface MealCardProps {
     meal: Meal;
