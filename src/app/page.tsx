@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,6 +15,18 @@ export default function Home() {
         />
         
       </main>
+      <div className="home">
+          <h1>Welcome to Meal Store</h1>
+          <p>Explore meals, save your favorites, or generate a random meal!</p>
+          <div className="mt-8 text-center">
+              <Link
+                  href="/menu"
+                  className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
+              >
+                  Go to Menu
+              </Link>
+          </div>
+      </div>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

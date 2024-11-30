@@ -10,18 +10,28 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
+
+
 const navLinks = [
   {
     href: "/",
     label: "Home",
   },
   {
-    href: "/posts",
-    label: "Posts",
+    href: "/menu",
+    label: "Menu",
   },
   {
-    href: "/comments",
-    label: "comments",
+    href: "/favorites",
+    label: "Favorites",
+  },
+  {
+    href: "/random",
+    label: "Random Meal",
+  },
+  {
+    href: "/about",
+    label: "About",
   },
 ];
 

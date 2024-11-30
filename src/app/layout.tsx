@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
+import Navbar from "@/components/navbar";
+import { FavoriteProvider } from "../context/FavoriteContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,11 +33,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <Container>
+        <FavoriteProvider>
+          <Container> 
             <Header />
               {children}
-            <Footer />
-          </Container>
+             <Footer />
+           </Container> 
+        </FavoriteProvider>
       </body>
     </html>
   );
