@@ -1,5 +1,3 @@
-'use client'
-import { useState } from "react";
 import { Meal } from "../../utils/types";
 import { useFavorites } from "../../context/FavoriteContext";
 import MealCard from "../../components/mealCard";

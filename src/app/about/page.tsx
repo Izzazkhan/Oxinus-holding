@@ -24,25 +24,25 @@ export default function AboutPage() {
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Key Highlights</h2>
                     <ul className="space-y-3">
                         <li className="flex items-start">
-                            <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
+                            {/* <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
                                 ✅
-                            </span>
+                            </span> */}
                             <p className="text-gray-600">
                                 Proficient in modern web development frameworks like Next.js and React.
                             </p>
                         </li>
                         <li className="flex items-start">
-                            <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
+                            {/* <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
                                 ✅
-                            </span>
+                            </span> */}
                             <p className="text-gray-600">
                                 Skilled in building responsive designs with Tailwind CSS.
                             </p>
                         </li>
                         <li className="flex items-start">
-                            <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
+                            {/* <span className="bg-blue-500 text-white p-2 rounded-full mr-4">
                                 ✅
-                            </span>
+                            </span> */}
                             <p className="text-gray-600">
                                 Experienced in integrating APIs for dynamic, data-driven applications.
                             </p>
