@@ -17,7 +17,6 @@ export const fetchMealsByCategory = async (category: string) => {
 //     return response.data.meals[0];
 // }
 
-export const dynamic = "force-dynamic";
 export const fetchRandomMeal = async () => {
     const response = await fetch(`${API_BASE_URL}/random.php`, { next: { tags: ["random-meal"] } })
     if (!response.ok) {

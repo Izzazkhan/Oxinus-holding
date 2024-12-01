@@ -26,13 +26,6 @@ const MealCard: React.FC<MealCardProps> = ({ meal }) => {
                     alt={meal.strMeal}
                     className="w-auto h-auto"
                 />
-                {/* <Image
-                    src={meal.strMealThumb}
-                    alt={meal.strMeal}
-                    width='auto'
-                    height='auto'
-                    priority
-                /> */}
             </div>
             <div className="p-4">
                 <h2 className="text-xl font-semibold text-gray-800">{meal.strMeal.split(' ').slice(0,4).join(' ')}</h2>

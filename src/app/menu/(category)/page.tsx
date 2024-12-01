@@ -1,10 +1,12 @@
 import React from "react";
-import { fetchCategories } from "../../../services/api";
-import { Category } from "../../../utils/types";
+import { fetchCategories } from "@/services/api";
+import { Category } from "@/utils/types";
 import Link from "next/link";
+import Loading from '@/components/loading'
 
-export default async function Menu() {
+export default async function MenuPage() {
     const data = await fetchCategories()
+    if (!data) return <Loading />
     return (
         <div className="bg-gray-100 min-h-screen p-6 mt-20">
             <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">Our Menu Categories</h1>

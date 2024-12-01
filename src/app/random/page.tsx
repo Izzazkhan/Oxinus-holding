@@ -1,12 +1,12 @@
 import React from "react";
-import { fetchRandomMeal } from "../../services/api";
-import MealCard from "../../components/mealCard";
+import { fetchRandomMeal } from "@/services/api";
+import MealCard from "@/components/mealCard";
+import Loading from "@/components/loading";
 
 export default async function RandomMeal() {
 
     const meal = await fetchRandomMeal()
-
-    // if (!meal) return <div>Loading...</div>;
+    if (!meal) return <Loading />
 
     return (
         <div className="random-meal mt-20">
@@ -16,5 +16,5 @@ export default async function RandomMeal() {
                 meal={meal}
             />
         </div>
-    );
+    )
 }
