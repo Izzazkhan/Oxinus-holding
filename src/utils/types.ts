@@ -12,8 +12,3 @@ export interface Category {
     strCategoryDescription: string;
 }
 
-export interface Meal {
-    idMeal: string;
-    strMeal: string;
-    strMealThumb: string;
-}

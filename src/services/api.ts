@@ -8,14 +8,9 @@ export const fetchCategories = async () => {
 };
 
 export const fetchMealsByCategory = async (category: string) => {
-    const response = await axios.get(`${API_BASE_URL}/filter.php?c=${category}`);
+    const response = await axios.get(`${API_BASE_URL}/filter.php?c=${category}`)
     return response.data.meals;
-};
-
-// export const fetchRandomMeal = async () => {
-//     const response = await axios.get(`${API_BASE_URL}/random.php`);
-//     return response.data.meals[0];
-// }
+}
 
 export const fetchRandomMeal = async () => {
     const response = await fetch(`${API_BASE_URL}/random.php`, { next: { tags: ["random-meal"] } })
@@ -24,4 +19,4 @@ export const fetchRandomMeal = async () => {
     }
     const data = await response.json()
     return data.meals[0]
-};
+}
