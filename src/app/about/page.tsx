@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function AboutPage() {
     return (
         <div className="bg-gray-100 min-h-screen py-12 px-6">
@@ -52,12 +54,12 @@ export default function AboutPage() {
 
                 {/* Call to Action */}
                 <div className="mt-8 text-center">
-                    <a
+                    <Link
                         href="/menu"
                         className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
                     >
                         Explore the Menu
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
